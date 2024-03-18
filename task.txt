@@ -1,0 +1,12 @@
+Create user app inside a new project and Model with following field:
+
+User Model field:
+    username -> charfield (shouldnot be null and blank)
+    email -> email (shouldnot be null and blank)
+    password -> charfield (shouldnot be null and blank)
+    first_name -> charfield
+    last_name -> charfield
+
+register it on the Admin Panel
+
+create READ (list, retrieve), UPDATE and DELETE
