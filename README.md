@@ -104,8 +104,7 @@ Welcome to your new Django project! This README file will guide you through sett
 └── venv/ (Virtual Environment - Optional)
 ```
 
-- `myproject/`: The main project directory.
-- `myproject/myproject/`: Contains project settings and configuration files.
+- `config/`: Contains project settings and configuration files.
 - `manage.py`: Django's command-line utility for administrative tasks.
 - `venv/` (Optional): Virtual environment directory.
 
