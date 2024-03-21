@@ -10,3 +10,5 @@ User Model field:
 register it on the Admin Panel
 
 create READ (list, retrieve), UPDATE and DELETE
+
+

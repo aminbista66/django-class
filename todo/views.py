@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from .models import Todo
+from .models import Todo, Tag
 
 
 def list_todo(request):
@@ -7,9 +7,24 @@ def list_todo(request):
 
     response_todo = []
 
-    for i in db_todos:
+    for todo in db_todos:
+        db_tags = Tag.objects.filter(todo__pk=todo.pk)
+        tags = []
+        for tag in db_tags:
+            tags.append(tag.name)
+            
         response_todo.append(
-            {"title": i.title, "completed": i.completed, "created_at": i.created_at}
+            {
+                "title": todo.title,
+                "completed": todo.completed,
+                "created_at": todo.created_at,
+                "user": {
+                    "username": todo.user.username,
+                    "first_name": todo.user.first_name,
+                    "last_name": todo.user.last_name,
+                },
+                "tags": tags,
+            }
         )
 
     return JsonResponse(response_todo, safe=False)
