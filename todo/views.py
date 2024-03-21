@@ -12,7 +12,7 @@ def list_todo(request):
         tags = []
         for tag in db_tags:
             tags.append(tag.name)
-            
+  
         response_todo.append(
             {
                 "title": todo.title,

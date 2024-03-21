@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "user",
     "author",
     "book",
+    "news",
 ]
 
 MIDDLEWARE = [

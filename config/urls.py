@@ -6,4 +6,6 @@ urlpatterns = [
     path("todos/", include("todo.urls")),
     path("authors/", include("author.urls")),
     path("books/", include("book.urls")),
+    path("articles/", include("news.urls")),
+    path("users/", include("user.urls"))
 ]
