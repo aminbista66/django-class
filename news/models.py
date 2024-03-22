@@ -6,6 +6,7 @@ class Article(models.Model):
     content = models.TextField()
     published_at = models.DateTimeField(auto_now_add=True)
     writer = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    like = models.ManyToManyField(User, blank=True, related_name="articles_likes")
 
     def __str__(self):
         return self.title
